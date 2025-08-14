@@ -1,0 +1,61 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacman - Drogas Educativas</title>
+    <style>
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Adicionado para evitar barras de rolagem */
+        }
+        canvas {
+            background-color: #000;
+            border: 2px solid #fff;
+            max-width: 90vw;   /* Limita a largura do canvas a 90% da largura da viewport */
+            max-height: 80vh;  /* Limita a altura do canvas a 80% da altura da viewport */
+            width: auto;       /* Permite que a largura se ajuste automaticamente */
+            height: auto;      /* Permite que a altura se ajuste automaticamente */
+            display: block;    /* Garante que o canvas se comporte como um bloco */
+        }
+        #message-area {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid #fff;
+            padding: 20px;
+            text-align: center;
+            display: none;
+            z-index: 100;
+        }
+        #message-area p {
+            margin: 10px 0;
+        }
+        #controls {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pacman - Drogas Educativas</h1>
+    <canvas id="gameCanvas"></canvas>
+    <div id="message-area">
+        <h2 id="drug-name"></h2>
+        <p id="drug-type"></p>
+        <div id="drug-message"></div>
+        <p>Pressione qualquer tecla para continuar.</p>
+    </div>
+    <div id="controls">
+        <p>Use as setas do teclado para mover o Pacman.</p>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
